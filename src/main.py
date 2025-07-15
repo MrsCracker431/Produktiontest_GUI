@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import customtkinter as ctk
 from gui.test_window import TestWindow
 
@@ -10,17 +9,4 @@ def main():
     app.mainloop()
 
 if __name__ == "__main__":
-=======
-import customtkinter as ctk
-from gui.test_window import TestWindow
-
-def main():
-    ctk.set_appearance_mode("light")
-    ctk.set_default_color_theme("blue")
-    
-    app = TestWindow()
-    app.mainloop()
-
-if __name__ == "__main__":
->>>>>>> 7219fbe912656346efc7d1ff426f83e2809bddf7
     main()
