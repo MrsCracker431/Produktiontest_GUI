@@ -39,10 +39,10 @@ def test_production():
 ### Test structure
 Be desciptive in the assertion message within the test. This is what shows up in if test fails.
 Example:
-# ❌ BAD - Generic message
+#### ❌ BAD - Generic message
 assert voltage == 3.3, "Voltage error"
 
-# ✅ GOOD - Descriptive message for production team
+#### ✅ GOOD - Descriptive message for production team
 assert voltage == 3.3, f"Power supply voltage {voltage}V is out of range (expected 3.3V) - Check J1 connector"
 
 
