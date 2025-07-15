@@ -34,9 +34,9 @@ class TestExecutor:
                     break
                     
                 # Look for test failures
-                if "FAILED" in line:
+                if "FAILED" in line and "::" in line:
                     # Extract failure info from pytest output
-                    test_name = line.split("::")[1].split()[0] if "::" in line else "Unknown test"
+                    test_name = line.split("::")[1].split()[0]
                     results["failures"].append({
                         "name": test_name,
                         "reason": "Test assertion failed"

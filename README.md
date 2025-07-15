@@ -29,13 +29,23 @@ Simple pass/fail test interface for production line operators.
 
 ## Adding Your Own Tests
 
-Replace the mock test in `tests/hardware_tests.py` with your actual hardware test:
+Replace the mock test in `tests/hardware_tests.py` with your actual hardware test or change the testpath and python_file to your test location in the `pytest.ini` file:
 
 ```python
 def test_production():
     # Your hardware test code here
     assert voltage == 3.3, "Voltage out of range"
 ```
+### Test structure
+Be desciptive in the assertion message within the test. This is what shows up in if test fails.
+Example:
+# ❌ BAD - Generic message
+assert voltage == 3.3, "Voltage error"
+
+# ✅ GOOD - Descriptive message for production team
+assert voltage == 3.3, f"Power supply voltage {voltage}V is out of range (expected 3.3V) - Check J1 connector"
+
+
 
 ## Configuration
 
