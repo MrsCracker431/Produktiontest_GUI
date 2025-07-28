@@ -53,6 +53,7 @@ Edit `pytest.ini` to change test behavior:
 - Timeout settings
 - Output verbosity
 - Test discovery paths
+- Mark tests with pytest markers for easier execution of test.
 
 ## Troubleshooting
 
